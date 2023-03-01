@@ -112,7 +112,7 @@ const Contact = () => {
       <div className="flex mx-12 gap-2 sm:flex-col sm:gap-6 top-0 mb-10 my-4 grow min-h-screen">
         <div className="w-3/4 flex flex-col sm:w-full">
           <h2 className="font-black text-3xl p-2 mb-3">
-            let&aposs build something <br></br>
+            we can build something <br></br>
             <span className="text-5xl text-purple">great together.</span>
           </h2>
           <p className="text-lg font-bold p-2 mb-3">

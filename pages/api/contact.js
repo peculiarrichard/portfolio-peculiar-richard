@@ -1,6 +1,6 @@
 let nodemailer = require("nodemailer");
 
-export default function handler(req, res) {
+export default async (req, res) => {
   require("dotenv").config();
   const PASSWORD = process.env.password;
 
@@ -23,9 +23,15 @@ export default function handler(req, res) {
     html: `<div>${req.body.message}</div>`,
   };
 
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
-  });
+//   transporter.sendMail(mailData, function (err, info) {
+//     if (err) console.log(err);
+//     else console.log(info);
+//   });
+//   return res.status(200).json({ error: "" });
+ try {
+    await transporter.sendMail(mailData);
+  } catch (error) {
+    return res.status(500).json({ error: error.message || error.toString() });
+  }
   return res.status(200).json({ error: "" });
 };
