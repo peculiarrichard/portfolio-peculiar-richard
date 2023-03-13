@@ -38,7 +38,7 @@ function Home({ repository }) {
             </h3>
             <h1
               data-aos="zoom-in-up"
-              className="text-5xl sm:text-3xl pb-6 font-black sm:text-center md:text-3xl text-white">
+              className="text-5xl sm:text-3xl pb-6 font-black sm:text-center md:text-3xl text-white font-comic">
               Software Engineer && Marketer...
             </h1>
             <p className="pb-5 text-ellipsis sm:text-center sm:font-normal text-white md:text-sm md:w-80">

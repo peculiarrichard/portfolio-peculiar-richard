@@ -46,7 +46,7 @@ export default function Marketer() {
                 <h2 className="text-xl sm:text-base font-bold">
                   join your growth team
                 </h2>
-                <p className="text-sm text-justify p-2">
+                <p className="text-sm text-justify p-2 font-comic">
                   i can work with your team on a full-time basis and together we
                   would explore and enhance the entire end-to-end user journey.
                   How would sitting back and watching qualified leads roll in or
@@ -69,7 +69,7 @@ export default function Marketer() {
                 <h2 className="text-xl sm:text-base font-bold">
                   independent consultations
                 </h2>
-                <p className="text-sm text-justify p-2 ">
+                <p className="text-sm text-justify p-2 font-comic ">
                   i can help you make better growth decisions, shape new
                   strategies, inform potential changes, and identify ineffective
                   marketing processes and procedures your company should ditch.
@@ -92,7 +92,7 @@ export default function Marketer() {
                 <h2 className="text-xl sm:text-base font-bold">
                   coach your growth team
                 </h2>
-                <p className="text-sm text-justify p-2">
+                <p className="text-sm text-justify p-2 font-comic">
                   if you already have a team, that is totally fine. I can train
                   and guide them on top-notch growth practices to take your
                   startup to the next level and achieve your set targets. the
@@ -122,11 +122,11 @@ export default function Marketer() {
                 src={content.logo}
                 className="self-start hover:scale-105 duration-300"
                 style={{ width: "auto", height: "auto" }}
-                width="50"
+                width="40"
                 height="50"
                 alt="logo"></Image>
               <div className="flex flex-col gap-2 text-justify">
-                <h2 className="font-black text-2xl text-purple">
+                <h2 className="font-black text-2xl text-purple font-comic">
                   {content.title}
                 </h2>
                 <h3 className="text-base font-semibold capitalize">
