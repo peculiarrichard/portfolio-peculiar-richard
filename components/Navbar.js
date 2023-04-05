@@ -62,7 +62,7 @@ const Navbar = () => {
             <button onClick={showcvMenu}>download CV +</button>
             {menu ? (
               <div className="absolute shadow-2xl h-25 sm:h-full lg:bg-white md:bg-white flex flex-col items-start p-2 text-sm gap-4 border-gray-300 bg-slate-100 rounded-lg  w-60 ml-3.5 mt-2.5 sm:text-xs">
-                <Link href="#" className="">
+                <Link href="https://drive.google.com/file/d/1CwKbxWYN-MW5ZB4RPwtZJAZLSIlAWAm8/view?usp=sharing" target="_blank" className="">
                   for software dev
                 </Link>
                 <Link href="#" className="">

@@ -33,8 +33,8 @@ export default function Marketer() {
           </button>
         </Link>
         <div className="flex flex-col justify-center items-start sm:my-0">
-          <h1 className="text-2xl font-bold my-6 sm:my-3">
-            How can i help you with your growth strategy?
+          <h1 className="text-3xl font-bold mb-10 mt-4 sm:text-2xl m-6 sm:ml-0">
+            How i can help you with growth for your startup
           </h1>
           <div className="flex justify-evenly w-full my-6 sm:my-2 sm:flex-col">
             <div className="flex flex-col items-center p-2">
@@ -46,7 +46,7 @@ export default function Marketer() {
                 <h2 className="text-xl sm:text-base font-bold">
                   join your growth team
                 </h2>
-                <p className="text-sm text-justify p-2 font-comic">
+                <p className="text-sm text-justify p-2">
                   i can work with your team on a full-time basis and together we
                   would explore and enhance the entire end-to-end user journey.
                   How would sitting back and watching qualified leads roll in or
@@ -69,7 +69,7 @@ export default function Marketer() {
                 <h2 className="text-xl sm:text-base font-bold">
                   independent consultations
                 </h2>
-                <p className="text-sm text-justify p-2 font-comic ">
+                <p className="text-sm text-justify p-2 ">
                   i can help you make better growth decisions, shape new
                   strategies, inform potential changes, and identify ineffective
                   marketing processes and procedures your company should ditch.
@@ -92,7 +92,7 @@ export default function Marketer() {
                 <h2 className="text-xl sm:text-base font-bold">
                   coach your growth team
                 </h2>
-                <p className="text-sm text-justify p-2 font-comic">
+                <p className="text-sm text-justify p-2">
                   if you already have a team, that is totally fine. I can train
                   and guide them on top-notch growth practices to take your
                   startup to the next level and achieve your set targets. the
@@ -150,15 +150,3 @@ export default function Marketer() {
   );
 }
 
-// export async function getStaticProps() {
-//   const response = await fetch("http://localhost:4000/content");
-//   const data = await response.json();
-//   console.log(data);
-
-//   return {
-//     props: {
-//       contents: data,
-//     },
-//     revalidate: 10,
-//   };
-// }
