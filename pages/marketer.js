@@ -9,14 +9,13 @@ import good from "../public/assests/good.jpg";
 import contents from "@/components/content";
 
 export default function Marketer() {
-  
   return (
     <>
       <Navbar></Navbar>
       <div className="mx-12 min-h-screen grow">
         <div className="flex sm:flex-col justify-between items-center p-2 mb-6">
           <div className="flex flex-col gap-4 justify-start mb-4 w-1/2 sm:w-full m-6">
-            <h1 className="text-2xl font-sofia font-black sm:text-center">
+            <h1 className="text-2xl font-sofia font-black sm:text-center capitalize">
               more than full-stack marketing
             </h1>
             <h1 className="text-3xl font-bold sm:text-2xl sm:text-center sm:w-full">
@@ -33,7 +32,7 @@ export default function Marketer() {
           </button>
         </Link>
         <div className="flex flex-col justify-center items-start sm:my-0">
-          <h1 className="text-3xl font-bold mb-10 mt-4 sm:text-2xl m-6 sm:ml-0">
+          <h1 className="text-3xl font-bold mb-10 mt-4 sm:text-2xl m-6 sm:ml-0 capitalize sm:text-center">
             How i can help you with growth for your startup
           </h1>
           <div className="flex justify-evenly w-full my-6 sm:my-2 sm:flex-col">
@@ -43,7 +42,7 @@ export default function Marketer() {
                 className="w-72 h-60 sm:h-48 rounded-t-xl sm:w-full md:w-60"
                 alt="meeting"></Image>
               <div className="flex flex-col w-72 sm:w-full md:w-60 bg-purple sm:text-sm text-white p-2 items-center rounded-b-lg">
-                <h2 className="text-xl sm:text-base font-bold">
+                <h2 className="text-xl sm:text-base font-bold capitalize">
                   join your growth team
                 </h2>
                 <p className="text-sm text-justify p-2">
@@ -66,7 +65,7 @@ export default function Marketer() {
                 className="w-72 h-60 sm:h-48 rounded-t-xl md:w-60 sm:w-full"
                 alt="meeting"></Image>
               <div className="flex flex-col w-72 sm:w-full md:w-60 bg-purple sm:text-sm text-white p-2 items-center rounded-b-lg">
-                <h2 className="text-xl sm:text-base font-bold">
+                <h2 className="text-xl sm:text-base font-bold capitalize">
                   independent consultations
                 </h2>
                 <p className="text-sm text-justify p-2 ">
@@ -89,7 +88,7 @@ export default function Marketer() {
                 className="w-72 h-60 sm:h-48 rounded-t-xl md:w-60 sm:w-full"
                 alt="meeting"></Image>
               <div className="flex flex-col w-72 sm:w-full md:w-60 bg-purple sm:text-sm text-white p-2 items-center rounded-b-lg">
-                <h2 className="text-xl sm:text-base font-bold">
+                <h2 className="text-xl sm:text-base font-bold capitalize">
                   coach your growth team
                 </h2>
                 <p className="text-sm text-justify p-2">
@@ -110,10 +109,9 @@ export default function Marketer() {
         </div>
         <h1 className="text-3xl font-bold mb-10 mt-4 sm:text-2xl m-6 sm:ml-0">
           experience so far...
-          
         </h1>
         {contents.map((content) => {
-          console.log(content)
+          console.log(content);
           return (
             <div
               key={content.id}
@@ -126,7 +124,7 @@ export default function Marketer() {
                 height="50"
                 alt="logo"></Image>
               <div className="flex flex-col gap-2 text-justify">
-                <h2 className="font-black text-2xl text-purple font-comic">
+                <h2 className="font-black text-2xl text-purple capitalize">
                   {content.title}
                 </h2>
                 <h3 className="text-base font-semibold capitalize">
@@ -149,4 +147,3 @@ export default function Marketer() {
     </>
   );
 }
-

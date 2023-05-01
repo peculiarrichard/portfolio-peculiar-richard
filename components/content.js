@@ -1,16 +1,6 @@
  const contents =[
         {
             id: 1,
-            logo: "/assests/capital votes.jpg",
-            name: "Capital Votes",
-            title:"Growth marketer",
-            date: "Oct 2022-present",
-            jobstyle: "part time",
-            respon: "Currently working with my team on growth strategies that span content, campaigns, email marketing, social media marketing, public relations, partnerships, and SEO to take the social media voting app to the market with a 96% working execution plan.",
-            skills: "Growth marketing, content marketing, strategy and development "
-        },
-        {
-            id: 2,
             logo: "/assests/regista.png",
             name: "Regista",
             title:"Growth engineer",
@@ -20,7 +10,7 @@
             skills: "Marketing, Growth, Product user research, Paid Ads, Framewrk building, Analytics"
         },
         {
-            id: 3,
+            id: 2,
             logo: "/assests/evo3d.png",
             name: "EVO3D",
             title:"Lead, Marketing",
@@ -30,7 +20,7 @@
             skills: "Leadership, Marketing, Content writing and creation, Ads and Analytics"
         },
         {
-            id: 4,
+            id: 3,
             logo: "/assests/aureole.png",
             name: "Aureole Consulting Ltd.",
             title:"Marketing & Comms manager",
@@ -40,7 +30,7 @@
             skills: "Business development, Marketing, Communication, Ads and analytics"
         },
         {
-            id: 5,
+            id: 4,
             logo: "/assests/nimedix.jpg",
             name: "Nimedix Tech Ltd.",
             title:"Digital media manager",
@@ -50,7 +40,7 @@
             skills: "Social media marketing, Content marketing"
         },
         {
-            id: 6,
+            id: 5,
             logo: "/assests/sanemind.png",
             name: "Sane Mind",
             title:"Digital Marketing Manager",
@@ -61,7 +51,7 @@
         },
         
         {
-            id: 7,
+            id: 6,
             logo: "/assests/side-hustle-logo.svg",
             name: "Terra (Side Hustle Internship)",
             title:"Instructor",
@@ -71,7 +61,7 @@
             skills: "Teaching, Mentorship, Career guidance"
         },
         {
-            id: 8,
+            id: 7,
             logo: "/assests/hertechtrail.png",
             name: "HerTechTrail Academy",
             title:"Instructor/Coach",
@@ -81,7 +71,7 @@
             skills: "Teaching, Coaching"
         },
         {
-            id: 9,
+            id: 8,
             logo: "/assests/freelance.png",
             name: "Freelance",
             title:"Marketing Consultant",

@@ -3,13 +3,12 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
-import { headers } from "@/next.config";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [submitted, setSubmitted] = useState(false);
+  
 
   const [errors, setErrors] = useState({});
 
@@ -80,30 +79,6 @@ const Contact = () => {
       setEmail("");
       setMessage("");
     }
-
-    // console.log("sending");
-    // let data = {
-    //   name:name,
-    //   email:email,
-    //   message:message,
-    // };
-    // const res = await fetch("/api/contact", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json, text/plain, */*",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // }).then((res) => {
-    //   console.log("Response received");
-    //   if (res.status === 200) {
-    //     setSubmitted(true);
-    //     setName("");
-    //     setEmail("");
-    //     setMessage("");
-    //     return;
-    //   }
-    // });
   };
 
   return (

@@ -55,17 +55,28 @@ const Navbar = () => {
           active ? "" : "hidden"
         } w-full md:inline-flex md:flex-grow md:w-auto lg:inline-flex lg:flex-grow lg:w-auto`}>
         <div className="w-full flex flex-row gap-7 justify-center items-center h-20 text-lg rounded-b-2xl p-2 font-bold sm:inline-flex sm:flex-col sm:fixed sm:h-64 sm:items-start sm:font-normal sm:gap-2 sm:text-sm sm:scroll-auto sm:animate-open-menu sm:bg-pink">
-          <Link href="/">home</Link>
-          <Link href="/marketer">marketing</Link>
-          <Link href="/contact">say hello</Link>
+          <Link href="/" className="capitalize">
+            home
+          </Link>
+          <Link href="/marketer" className="capitalize">
+            marketing
+          </Link>
+          <Link href="/contact" className="capitalize">
+            say hello
+          </Link>
           <div className="relative">
-            <button onClick={showcvMenu}>download CV +</button>
+            <button onClick={showcvMenu} className="capitalize">
+              download CV +
+            </button>
             {menu ? (
               <div className="absolute shadow-2xl h-25 sm:h-full lg:bg-white md:bg-white flex flex-col items-start p-2 text-sm gap-4 border-gray-300 bg-slate-100 rounded-lg  w-60 ml-3.5 mt-2.5 sm:text-xs">
-                <Link href="https://drive.google.com/file/d/1CwKbxWYN-MW5ZB4RPwtZJAZLSIlAWAm8/view?usp=sharing" target="_blank" className="">
+                <Link
+                  href="https://drive.google.com/file/d/1CwKbxWYN-MW5ZB4RPwtZJAZLSIlAWAm8/view?usp=sharing"
+                  target="_blank"
+                  className="capitalize">
                   for software dev
                 </Link>
-                <Link href="#" className="">
+                <Link href="#" className="capitalize">
                   for marketing
                 </Link>
               </div>

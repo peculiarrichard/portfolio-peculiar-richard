@@ -8,14 +8,13 @@ import { useState } from "react";
 import { paginate } from "@/components/paginate";
 import imgg from "../public/assests/imgg.png";
 import Footer from "@/components/Footer";
-import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
+import projects from "@/data/projects";
 
-function Home({ repository }) {
+function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 4;
-  const paginatedPosts = paginate(repository, currentPage, pageSize);
-  console.log(paginatedPosts);
+  const paginatedPosts = paginate(projects, currentPage, pageSize);
   const onPageChange = (page) => {
     setCurrentPage(page);
   };
@@ -24,7 +23,7 @@ function Home({ repository }) {
     <>
       <div>
         <Head>
-          <title>Peculiar Richard</title>
+          <title>Peculiar Richard | Portfolio</title>
           <link rel="icon" href=""></link>
         </Head>
       </div>
@@ -39,7 +38,7 @@ function Home({ repository }) {
             </h3>
             <h1
               data-aos="zoom-in-up"
-              className="text-5xl sm:text-3xl pb-6 font-black sm:text-center md:text-3xl text-white">
+              className="text-5xl sm:text-3xl pb-6 font-black sm:text-center md:text-3xl text-white capitalize">
               Software Engineer && Marketer...
             </h1>
             <p className="pb-5 text-ellipsis sm:text-center sm:font-normal text-white md:text-sm md:w-80">
@@ -48,7 +47,7 @@ function Home({ repository }) {
               workerholic, I also love to travel, read novels, and play board
               games. but who cares if I am? as long as I get things done 😉
             </p>
-            <p className="pb-5 font-extrabold text-xl sm:text-center text-white md:text-sm">
+            <p className="pb-5 font-extrabold text-xl sm:text-center text-white md:text-sm capitalize">
               frontend engineer || web3 developer
             </p>
             <div className="flex gap-4 pt-5">
@@ -112,46 +111,42 @@ function Home({ repository }) {
 
       {/* skills section */}
       <Skills></Skills>
-      
+
       {/* projects  */}
       <div className="flex flex-col m-12 p-4 sm:m-4">
         <div className="mb-5">
-          <h1 className="text-3xl font-black sm:text-2xl">I have worked on...</h1>
+          <h1 className="text-3xl font-black sm:text-2xl capitalize">
+            I have worked on...
+          </h1>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-1 content-center m-auto">
           {paginatedPosts.map((repo) => {
             return (
               <div
                 key={repo.id}
-                className="flex flex-col hover:translate-y-1 hover:scale-105 duration-300 justify-center items-center gap-3 p-6 h-96 rounded-xl shadow-xl sm:mb-6 sm:mt-1 md:m-4 lg:m-4 bg-pink w-129 md:w-125 sm:w-full sm:h-80">
-                <h3 className="font-bold text-xl text-center">
-                  project name: {repo.name}
+                className="flex flex-col hover:translate-y-1 hover:scale-105 duration-300 justify-start items-center p-6 h-[35rem] shadow-xl sm:mb-6 sm:mt-1 md:m-4 lg:m-4 bg-pink w-129 md:w-[19.5rem] sm:w-full sm:h-[95%] gap-4">
+                <h3 className="font-bold text-xl lg:text-3xl text-center capitalize">
+                  {repo.name}
                 </h3>
+                <Image
+                  src={repo.img}
+                  alt="img"
+                  className="w-[100%] sm:h-[8rem] md:h-[9rem] lg:h-[12rem]"></Image>
                 <p className="text-sm text-justify">{repo.description}</p>
-                {repo.language !== null ? (
-                  <h3 className="">tool used: {repo.language}</h3>
-                ) : (
-                  <div></div>
-                )}
+                <h3 className="capitalize">tools used: {repo.tools}</h3>
+                <div></div>
 
                 <div className="flex gap-2">
-                  <a href={repo.svn_url} target="_blank" rel="noreferrer">
+                  <a href={repo.github} target="_blank" rel="noreferrer">
                     <button className="bg-purple text-white p-2 rounded-lg text-sm hover:bg-moove">
                       source code
                     </button>
                   </a>
-                  {repo.homepage !== null && repo.homepage !== "" ? (
-                    <a
-                      href={`https://${repo.homepage}`}
-                      target="_blank"
-                      rel="noreferrer">
-                      <button className="bg-white p-2 rounded-lg text-sm border border-purple hover:bg-slate hover:text-white">
-                        view site
-                      </button>
-                    </a>
-                  ) : (
-                    <div></div>
-                  )}
+                  <a href={repo.website} target="_blank" rel="noreferrer">
+                    <button className="bg-white p-2 rounded-lg text-sm border border-purple hover:bg-slate hover:text-white">
+                      view site
+                    </button>
+                  </a>
                 </div>
               </div>
             );
@@ -159,16 +154,35 @@ function Home({ repository }) {
         </div>
       </div>
       <Pagination
-        repos={repository.length}
+        repos={projects.length}
         currentPage={currentPage}
         pageSize={pageSize}
         onPageChange={onPageChange}></Pagination>
-
+      <div className="flex justify-center items-center gap-2 mt-4">
+        <Link
+          href="https://github.com/peculiarrichard"
+          className="text-center md:text-xl lg:text-xl animate-pulse">
+          view more on github
+        </Link>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M13.3 17.275q-.3-.3-.288-.725t.313-.725L16.15 13H5q-.425 0-.713-.288T4 12q0-.425.288-.713T5 11h11.15L13.3 8.15q-.3-.3-.3-.713t.3-.712q.3-.3.713-.3t.712.3L19.3 11.3q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.687.275t-.713-.3Z"
+            className=""
+          />
+        </svg>
+      </div>
       {/* about me session */}
 
       <div className="flex flex-col m-12 p-4 sm:m-4 h-full">
         <div className="mb-5">
-          <h1 className="text-3xl font-black sm:text-2xl">about me...</h1>
+          <h1 className="text-3xl font-black sm:text-2xl capitalize">
+            about me...
+          </h1>
         </div>
         <div className="flex sm:flex-col justify-center items-center gap-4 mt-2 sm:mb-2 mb-8">
           <Image
@@ -193,14 +207,13 @@ function Home({ repository }) {
               understanding of web3 best practices. <br></br>
               <br></br> In addition to my technical skills, I am a great
               communicator and collaborator. I can work closely with you to
-              ensure that your vision is reflected in the final product, and I am
-              always willing to make adjustments and changes as needed. I am also
-              highly organized and detail-oriented, which means that I will ensure
-              that every element of your product is pixel-perfect and optimized
-              for performance.
+              ensure that your vision is reflected in the final product, and I
+              am always willing to make adjustments and changes as needed. I am
+              also highly organized and detail-oriented, which means that I will
+              ensure that every element of your product is pixel-perfect and
+              optimized for performance.
             </p>
             <h3 className="m-1 font-black text-sm">want to know more?</h3>
-            {/* <p className="m-1 italic sm:text-sm">i'm just a dm away</p> */}
           </div>
         </div>
         <div>
@@ -211,25 +224,9 @@ function Home({ repository }) {
           </Link>
         </div>
       </div>
-      <Experience></Experience>
       <Footer></Footer>
     </>
   );
 }
 
 export default Home;
-
-export async function getStaticProps() {
-  const response = await fetch(
-    "https://api.github.com/users/peculiarrichard/repos"
-  );
-  const data = await response.json();
-  console.log(data);
-
-  return {
-    props: {
-      repository: data,
-    },
-    revalidate: 10,
-  };
-}

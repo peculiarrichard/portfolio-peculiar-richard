@@ -6,7 +6,7 @@ const Skills = () => {
 
 
 <div className="flex flex-col m-12 sm:m-4 p-4">
-        <h1 className="text-3xl sm:text-2xl font-black mb-2 sm:mb-4 sm:mt-0">
+        <h1 className="text-3xl sm:text-2xl font-black mb-2 sm:mb-4 sm:mt-0 capitalize">
           Skills...
         </h1>
         <div className="flex sm:flex-col md:flex-col gap-6 justify-around items-center">
