@@ -13,7 +13,7 @@ const Skills = () => {
           <div
             data-aos="zoom-in"
             className="grid grid-cols-3 gap-4 w-8/12 sm:grid-cols-2 md:grid-cols-2 md:w-full sm:w-full justify-start sm:justify-center text-sm">
-            <table className="w-60 bg-purple rounded-2xl sm:w-32 m-6 sm:m-0 text-white shadow-xl">
+            <table className="w-60 bg-purple rounded-2xl sm:w-32 m-6 sm:m-0 text-white shadow-xl h-[10rem] items-center justify-center">
               <thead>
                 <tr className="">
                   <th className="border-b-2 text-start  px-4">languages</th>
@@ -28,7 +28,7 @@ const Skills = () => {
                 </tr>
               </tbody>
             </table>
-            <table className="w-60 sm:w-32 shadow-2xl rounded-2xl m-6 sm:m-0">
+            <table className="w-60 sm:w-32 shadow-2xl rounded-2xl m-6 sm:m-0 h-[10rem]">
               <thead>
                 <tr>
                   <th className="border-b-2 text-start px-4">frameworks</th>
@@ -43,7 +43,7 @@ const Skills = () => {
                 </tr>
               </tbody>
             </table>
-            <table className="w-60 sm:w-32 rounded-2xl shadow-2xl bg-purple text-white m-6 sm:m-0">
+            <table className="w-60 sm:w-32 rounded-2xl shadow-2xl bg-purple text-white m-6 sm:m-0 h-[10rem]">
               <thead>
                 <tr>
                   <th className="border-b-2 text-start  px-4">stylesheets</th>
@@ -52,13 +52,12 @@ const Skills = () => {
               <tbody>
                 <tr>
                   <td className=" border-t-0 px-4 py-2 leading-6 ">
-                    css <br></br> sass <br></br>tailwind <br></br>styled-
-                    components <br></br>bootstrap
+                    css <br></br> sass <br></br>tailwind <br></br>bootstrap
                   </td>
                 </tr>
               </tbody>
             </table>
-            <table className="w-60 shadow-2xl rounded-2xl sm:w-32 m-6 sm:m-0 ">
+            <table className="w-60 shadow-2xl rounded-2xl sm:w-32 m-6 sm:m-0 h-[10rem] ">
               <thead>
                 <tr>
                   <th className="border-b-2 text-start  px-4">tools</th>
@@ -73,7 +72,7 @@ const Skills = () => {
                 </tr>
               </tbody>
             </table>
-            <table className="w-60 rounded-2xl shadow-2xl bg-purple text-white sm:w-32 m-6 sm:m-0">
+            <table className="w-60 rounded-2xl shadow-2xl bg-purple text-white sm:w-32 m-6 sm:m-0 h-[10rem]">
               <thead>
                 <tr>
                   <th className="border-b-2 text-start  px-4">markup</th>
@@ -87,7 +86,7 @@ const Skills = () => {
                 </tr>
               </tbody>
             </table>
-            <table className="w-60 rounded-2xl shadow-2xl  sm:w-32 m-6 sm:m-0">
+            <table className="w-60 rounded-2xl shadow-2xl  sm:w-32 m-6 sm:m-0 h-[10rem]">
               <thead>
                 <tr>
                   <th className="border-b-2  text-start  px-4">others</th>
