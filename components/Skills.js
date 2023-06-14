@@ -37,7 +37,7 @@ const Skills = () => {
               <tbody>
                 <tr>
                   <td className=" border-t-0 px-4 py-2 leading-6 ">
-                    react <br></br> next <br></br>vue <br></br>truffle suite{" "}
+                    react <br></br> next <br></br>vue <br></br>Ethers JS{" "}
                     <br></br>web3.js
                   </td>
                 </tr>

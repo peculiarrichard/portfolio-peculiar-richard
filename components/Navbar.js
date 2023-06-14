@@ -58,9 +58,6 @@ const Navbar = () => {
           <Link href="/" className="capitalize">
             home
           </Link>
-          <Link href="/marketer" className="capitalize">
-            marketing
-          </Link>
           <Link href="/contact" className="capitalize">
             say hello
           </Link>
@@ -75,9 +72,6 @@ const Navbar = () => {
                   target="_blank"
                   className="capitalize">
                   for software dev
-                </Link>
-                <Link href="#" className="capitalize">
-                  for marketing
                 </Link>
               </div>
             ) : null}

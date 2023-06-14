@@ -39,12 +39,12 @@ function Home() {
             <h1
               data-aos="zoom-in-up"
               className="text-5xl sm:text-3xl pb-6 font-black sm:text-center md:text-3xl text-white capitalize">
-              Software Engineer && Marketer...
+              Software Engineer && Technical Writer...
             </h1>
             <p className="pb-5 text-ellipsis sm:text-center sm:font-normal text-white md:text-sm md:w-80">
               i build frontend and decentralized apps. when I am not writing
-              codes, I am doing growth and marketing. i promise you, I am not a
-              workerholic, I also love to travel, read novels, and play board
+              codes, I am writing articles about software development and web3. i promise you, I am not a
+              workerholic, I also love to travel and play board
               games. but who cares if I am? as long as I get things done 😉
             </p>
             <p className="pb-5 font-extrabold text-xl sm:text-center text-white md:text-sm capitalize">
