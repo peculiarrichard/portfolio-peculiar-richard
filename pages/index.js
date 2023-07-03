@@ -3,22 +3,12 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import grid from "../public/assests/grid.png";
-import Pagination from "../components/Pagination";
-import { useState } from "react";
-import { paginate } from "@/components/paginate";
 import imgg from "../public/assests/imgg.png";
 import Footer from "@/components/Footer";
 import Skills from "@/components/Skills";
 import projects from "@/data/projects";
 
 function Home() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 4;
-  const paginatedPosts = paginate(projects, currentPage, pageSize);
-  const onPageChange = (page) => {
-    setCurrentPage(page);
-  };
-
   return (
     <>
       <div>
@@ -30,35 +20,36 @@ function Home() {
       {/* navbar */}
 
       <Navbar />
-      <div className="  border bg-hero sm:rounded-b-xl rounded-b-2xl bg-cover bg-no-repeat md:h-full h-128 lg:h-130 w-full bg-local sm:h-full bg-blend-darken">
-        <div className="mx-12 my-2 p-4 mb-0 pb-0 flex sm:flex-col sm:m-4 md:mb-0">
-          <div className="flex flex-col w-1/2 sm:w-full sm:justify-center sm:items-center mr-6 pr-6 pl-2">
+      <div className="bg-hero sm:rounded-b-xl rounded-b-2xl bg-cover bg-no-repeat md:h-full h-128 lg:h-130 w-full bg-local sm:h-full mb-20">
+        <div className="w-[90%] my-2 flex sm:flex-col m-auto justify-between">
+          <div className="flex flex-col w-1/2 sm:w-full sm:justify-center sm:items-center mt-8">
             <h3 className="font-sofia text-2xl pb-5 text-white capitalize">
               Peculiar Richard
             </h3>
             <h1
               data-aos="zoom-in-up"
-              className="text-5xl sm:text-3xl pb-6 font-black sm:text-center md:text-3xl text-white capitalize">
+              className="text-5xl sm:text-3xl mb-8 font-black sm:text-center md:text-3xl text-white capitalize">
               Software Engineer && Technical Writer...
             </h1>
-            <p className="pb-5 text-ellipsis sm:text-center sm:font-normal text-white md:text-sm md:w-80">
-              i build frontend and decentralized apps. when I am not writing
-              codes, I am writing articles about software development and web3. i promise you, I am not a
-              workerholic, I also love to travel and play board
-              games. but who cares if I am? as long as I get things done 😉
+            <p className="mb-5 text-ellipsis sm:text-center sm:font-normal text-white md:text-sm">
+              I build frontend and decentralized apps. When I am not writing
+              codes, I am writing articles about software development and web3.
+              I promise you, I am not a workerholic, I also love to travel and
+              play board games. But who cares if I am? as long as I get things
+              done 😉
             </p>
-            <p className="pb-5 font-extrabold text-xl sm:text-center text-white md:text-sm capitalize">
-              frontend engineer || web3 developer
+            <p className="mb-5 font-extrabold text-xl sm:text-center text-white md:text-sm capitalize">
+              Frontend engineer || Web3 developer
             </p>
-            <div className="flex gap-4 pt-5">
-              <button className="w-32 sm:w-28 h-10 rounded-xl bg-purple animate-pulse">
+            <div className="flex gap-4 mt-5">
+              <button className="p-3 rounded-xl bg-purple animate-pulse">
                 <Link
                   href="/contact"
-                  className="text-white font-bold sm:font-normal sm:text-sm">
-                  contact me
+                  className="p-3 text-white font-bold sm:font-normal sm:text-sm">
+                  Contact me
                 </Link>
               </button>
-              <button className="w-36 sm:w-30 h-10 rounded-xl bg-white animate-pulse">
+              <button className="p-3 rounded-xl bg-white animate-pulse">
                 <Link
                   href="https://open.spotify.com/playlist/37i9dQZF1DXbqtyDNQsEFL?si=00f1bfaa6a334d30"
                   target="_blank"
@@ -72,10 +63,10 @@ function Home() {
           <Image
             data-aos="fade-up"
             src={grid}
-            alt=""
-            className="w-2/5 m-10 mb-0 mt-8 h-2/6 rounded-lg sm:self-center sm:justify-self-center sm:w-80 md:w-80"></Image>
+            alt="homeimg"
+            className="w-2/5 mt-8 h-2/6 rounded-lg sm:self-center sm:justify-self-center sm:w-80 md:w-80"></Image>
         </div>
-        <div className=" flex gap-6 justify-end mr-36 mt-2 sm:justify-center sm:m-2 md:justify-start md:mb-2 md:ml-20">
+        <div className="w-[90%] m-auto flex gap-6 justify-end mt-6 sm:mt-2 sm:justify-center sm:m-2 md:justify-start md:mb-2 ">
           <Link href="https://github.com/peculiarrichard">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,38 +104,42 @@ function Home() {
       <Skills></Skills>
 
       {/* projects  */}
-      <div className="flex flex-col m-12 p-4 sm:m-4">
-        <div className="mb-5">
-          <h1 className="text-3xl font-black sm:text-2xl capitalize">
-            I have worked on...
-          </h1>
+      <div className="flex flex-col mt-12 sm:mt-4 w-[90%] m-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-black sm:text-2xl">Projects...</h1>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-1 content-center m-auto">
-          {paginatedPosts.map((repo) => {
+        <div className="grid grid-cols-2 sm:grid-cols-1 justify-start gap-5">
+          {projects.map((repo) => {
             return (
               <div
                 key={repo.id}
-                className="flex flex-col hover:translate-y-1 hover:scale-105 duration-300 justify-start items-center p-6 h-[35rem] shadow-xl sm:mb-6 sm:mt-1 md:m-4 lg:m-4 bg-pink w-129 md:w-[19.5rem] sm:w-full sm:h-[95%] gap-4">
-                <h3 className="font-bold text-xl lg:text-3xl text-center capitalize">
+                className="flex flex-col hover:scale-105 duration-100 justify-center items-center p-2 h-[30rem] shadow-xl mb-6 sm:mt-1 bg-pink w-129 lg:w-[27rem] md:w-[20rem] sm:w-full sm:h-[95%] gap-2">
+                <p className="-mt-6 bg-purple p-2 text-white text-[0.5rem] self-start rounded-3xl">
+                  {repo.staus}
+                </p>
+                <h3 className="font-bold text-lg lg:text-xl text-center capitalize">
                   {repo.name}
                 </h3>
                 <Image
                   src={repo.img}
                   alt="img"
-                  className="w-[100%] sm:h-[8rem] md:h-[9rem] lg:h-[12rem]"></Image>
-                <p className="text-sm text-justify">{repo.description}</p>
-                <h3 className="capitalize">tools used: {repo.tools}</h3>
-                <div></div>
+                  className="w-[90%] sm:w-[80%] sm:h-[8rem] "></Image>
+                <p className="text-[0.8rem] text-justify w-[90%]">
+                  {repo.description}
+                </p>
+                <h3 className="text-[0.8rem] capitalize font-semibold w-[90%]">
+                  tools: {repo.tools}
+                </h3>
 
                 <div className="flex gap-2">
                   <a href={repo.github} target="_blank" rel="noreferrer">
-                    <button className="bg-purple text-white p-2 rounded-lg text-sm hover:bg-moove">
-                      source code
+                    <button className="bg-purple text-white p-2 rounded-lg text-[0.8rem] hover:bg-moove">
+                      Source code
                     </button>
                   </a>
                   <a href={repo.website} target="_blank" rel="noreferrer">
-                    <button className="bg-white p-2 rounded-lg text-sm border border-purple hover:bg-slate hover:text-white">
-                      view site
+                    <button className="bg-white p-2 rounded-lg text-[0.8rem] border border-purple hover:bg-slate hover:text-white">
+                      View site
                     </button>
                   </a>
                 </div>
@@ -153,12 +148,7 @@ function Home() {
           })}
         </div>
       </div>
-      <Pagination
-        repos={projects.length}
-        currentPage={currentPage}
-        pageSize={pageSize}
-        onPageChange={onPageChange}></Pagination>
-      <div className="flex justify-center items-center gap-2 mt-4">
+      <div className="flex justify-start items-center gap-2 mt-8 w-[90%] font-extrabold m-auto">
         <Link
           href="https://github.com/peculiarrichard"
           className="text-center md:text-xl lg:text-xl animate-pulse">
@@ -178,23 +168,19 @@ function Home() {
       </div>
       {/* about me session */}
 
-      <div className="flex flex-col m-12 p-4 sm:m-4 h-full">
+      <div className="flex flex-col mt-12 sm:mt-10 h-full w-[90%] m-auto">
         <div className="mb-5">
           <h1 className="text-3xl font-black sm:text-2xl capitalize">
             about me...
           </h1>
         </div>
         <div className="flex sm:flex-col justify-center items-center gap-4 mt-2 sm:mb-2 mb-8">
-          <Image
-            src={imgg}
-            alt="about-me"
-            className="rounded-full sm:w-60 w-1/4 md:self-start lg:self-start"></Image>
-          <div className="flex flex-col lg:w-3/4 md:w-3/4">
+          <div className="flex flex-col">
             <h2 className="text-lg font-bold m-1">
               I can work with, and for you...
             </h2>
-            <p className="text-justify sm:text-sm m-1 text-lg lowercase">
-              i enjoy converting ideas into real life products. As a frontend
+            <p className="text-justify sm:text-sm m-1 text-lg">
+              I enjoy converting ideas into real life products. As a frontend
               developer, I have the skills and expertise to create responsive,
               user-friendly applications that not only look great but also
               function flawlessly. I specialize in CSS, JavaScript, React, and
@@ -213,11 +199,11 @@ function Home() {
               ensure that every element of your product is pixel-perfect and
               optimized for performance.
             </p>
-            <h3 className="m-1 font-black text-sm">want to know more?</h3>
+            <h3 className="mt-4 font-black text-sm">want to know more?</h3>
           </div>
         </div>
         <div>
-          <Link href="/contact" className="flex">
+          <Link href="/contact" className="flex mt-4">
             <button className="bg-purple p-4 text-white rounded-2xl w-48 mb-2  m-auto sm:text-sm animate-bounce hover:bg-slate">
               contact me
             </button>

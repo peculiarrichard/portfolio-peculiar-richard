@@ -26,7 +26,7 @@ module.exports = {
     fontFamily: {
       mont: ["Montserrat", "sans-serif"],
       sofia: ["Princess Sofia", "cursive"],
-      comic: ["Comic Neue", "cursive"],
+      comic: ["Fira Code", "monospace"],
     },
 
     extend: {

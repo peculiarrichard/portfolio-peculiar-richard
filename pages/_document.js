@@ -12,13 +12,21 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&family=Inter:wght@300&family=Manrope:wght@400;500;600&family=Montserrat&family=Open+Sans&family=Poppins:wght@300&family=Princess+Sofia&display=swap"
           rel="stylesheet"></link> */}
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="true"></link>
         <link
           href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Open+Sans&family=Poppins:wght@300&family=Princess+Sofia&display=swap"
+          rel="stylesheet"></link> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
           rel="stylesheet"></link>
       </Head>
       <body>

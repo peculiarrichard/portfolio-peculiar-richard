@@ -14,10 +14,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center flex-wrap rounded-b-xl">
+    <nav className="flex items-center flex-wrap rounded-b-xl top-0 sticky z-50 bg-white">
       <Link
         href="/"
-        className="md:hidden lg:hidden sm:inline-flex sm:items-center sm:font-mono m-4 font-black capitalize">
+        className="flex sm:inline-flex sm:items-center sm:font-mono m-4 font-black capitalize">
         Peculiar
       </Link>
       <button
